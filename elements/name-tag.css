@@ -1,0 +1,32 @@
+* {
+	font-family: Helvetica;
+}
+
+.tag {
+	height: 160px;
+	width: 300px;
+	box-shadow: -1px 1px 4px rgba(0, 0, 0, 0.3);
+	margin: 15px;
+	border-radius: 4px;
+}
+
+.tag-top {
+	height: 50px;
+	color: #fff;
+	font-size: 2em;
+	font-weight: 400;
+	box-sizing: border-box;
+	padding: 5px 10px;
+	border-top-right-radius: 4px;
+	border-top-left-radius: 4px;
+}
+
+.tag-bottom {
+	font-family: 'Journal';
+	font-size: 5em;
+	text-align: center;
+}
+
+.summary {
+	font-size: 1.2em;
+}

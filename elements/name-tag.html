@@ -1,0 +1,16 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/core-ajax/core-ajax.html">
+
+<polymer-element name="name-tag">
+  <template>
+	  <template repeat="{{ persons }}">
+	  	<div class="tag">
+	  		<div class="tag-top" style="background: {{ background }};">Hello, my name is</div>
+	  		<div class="tag-bottom">{{ name }}</div>
+	  	</div>
+	  </template>
+	  <p class="summary">Attendees: {{ persons.length }}</p>
+	  <link rel="stylesheet" href="/elements/name-tag.css">
+  </template>
+  <script src="/elements/name-tag.js"></script>
+</polymer-element>
