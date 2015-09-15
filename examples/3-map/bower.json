@@ -1,0 +1,16 @@
+{
+  "name": "polymer-viz",
+  "version": "0.0.0",
+  "authors": [
+    "Don McCurdy <dm@donmccurdy.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "iron-elements": "~1.0.3",
+    "paper-elements": "PolymerElements/paper-elements#^1.0.1",
+    "google-map": "~1.1.0",
+    "webcomponentsjs": "~0.7.12",
+    "point-overlay": "googlecodelabs/polymer-webgl-visualization#^1.0.0"
+  }
+}

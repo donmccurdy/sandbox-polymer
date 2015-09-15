@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Polymer Visualization Demo</title>
+		<script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+		<link rel="import" href="bower_components/google-map/google-map.html">
+		<link rel="import" href="bower_components/point-overlay/point-overlay.html">
+		<link rel="import" href="bower_components/paper-card/paper-card.html">
+		<link rel="import" href="bower_components/paper-slider/paper-slider.html">
+		<link rel="import" href="bower_components/iron-ajax/iron-ajax.html">
+		<style>
+			body, html {
+				font-family: 'Roboto', Arial, sans-serif;
+				height: 100%;
+				margin: 0;
+			}
+			paper-card {
+				position: absolute;
+				top: 25px;
+				right: 25px;
+			}
+		</style>
+	</head>
+	<body unresolved>
+		<template is="dom-bind">
+			<google-map map="{{map}}" latitude="39.788" longitude="-105.887" zoom="5"
+				styles='[{"stylers":[{"saturation":-85}]},{"featureType":"water","stylers":[{"lightness":-20}]}]'></google-map>
+			<point-overlay map="[[map]]" uniforms="{{uniforms}}" data="{{data}}"></point-overlay>
+			<paper-card elevation="2">
+				<paper-slider min="5" max="100" value="30" immediate-value="{{uniforms.pointSize}}"></paper-slider>
+			</paper-card>
+			<iron-ajax
+				auto
+				url="bower_components/point-overlay/tornadoes-1950-2014.json"
+				handle-as="json"
+				last-response="{{data}}">
+			</iron-ajax>
+		</template>
+	</body>
+</html>
